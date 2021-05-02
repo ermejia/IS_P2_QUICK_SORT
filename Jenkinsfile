@@ -9,7 +9,7 @@ pipeline{
                 echo "-------Uploading Artifact--------"
             
                 rtMavenDeployer (
-                    id:'IS_P2_INSERTION_SORT',
+                    id:'IS_P2_QUICK_SORT',
                     serverId: 'artifactory',
                     releaseRepo: 'QuickSort',
                     snapshotRepo: 'QuickSort',
@@ -17,7 +17,7 @@ pipeline{
                 rtMavenRun(
                     pom: 'pom.xml',
                     goals: 'install',
-                    deployerId: 'IS_P2_INSERTION_SORT'
+                    deployerId: 'IS_P2_QUICK_SORT'
                 )
 
                     echo "-----Deploying Finished-----"
